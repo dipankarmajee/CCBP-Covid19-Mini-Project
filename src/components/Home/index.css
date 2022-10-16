@@ -116,16 +116,6 @@ li {
   color: #6c757d;
 }
 
-.all-states-table {
-  text-align: center;
-  width: 100%;
-  background: #1e1e30;
-  border: 1px solid #475569;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
-  border-radius: 12px;
-  align-self: flex-start;
-}
-
 .table-header {
   border-bottom: 1px solid #475569;
   display: flex;
@@ -137,12 +127,46 @@ li {
 }
 
 .state-table {
-  width: 80%;
+  width: 90%;
   margin-top: 64px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 700px;
+  max-width: 90vw;
+
+  min-width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .state-table {
+    width: 90%;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+    /* overflow-y: auto; */
+    overflow-x: auto;
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+}
+
+.all-states-table {
+  text-align: center;
+  width: 100%;
+  background: #1e1e30;
+  border: 1px solid #475569;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  align-self: flex-start;
+  min-width: fit-content;
 }
 
 .table-header-title {
@@ -159,9 +183,11 @@ li {
 }
 .states-names {
   width: 22%;
+  /* min-width: 180px; */
 }
 
 .state-name-heading {
+  min-width: 175px;
   width: 22%;
   padding: 0px 32px;
   display: flex;
@@ -182,6 +208,7 @@ li {
 
 .other-tables-bar {
   width: 15.6%;
+  min-width: 80px;
 }
 
 .other-tables {
@@ -225,7 +252,7 @@ li {
 }
 
 .state-table {
-  width: 80%;
+  width: 90%;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
