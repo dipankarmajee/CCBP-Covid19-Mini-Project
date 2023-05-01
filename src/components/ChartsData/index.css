@@ -7,9 +7,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  max-width: 90vw;
 }
-
 .charts {
   border-radius: 12px;
   margin-bottom: 32px;
@@ -46,25 +44,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 90vw;
-  height: fit-content;
 }
 
 .chart-wrapper {
-  /* overflow-x: auto; */
-  max-width: 90vw;
-  min-height: 100%;
+  overflow-x: auto;
 }
 
 @media (max-width: 600px) {
   .charts {
     width: 100%;
-    max-width: 90vw;
-  }
-
-  .chart-wrapper {
-    overflow-x: auto;
-    max-width: 90vw;
-    /* min-height: fit-content; */
   }
 }

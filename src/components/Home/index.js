@@ -242,52 +242,40 @@ class Home extends Component {
 
     return (
       <>
-        <div
-          // testid="countryWideConfirmedCases"
-          className="stats-block-column"
-        >
+        <div testid="countryWideConfirmedCases" className="stats-block-column">
           <p className="stats-title red">Confirmed</p>
           <img
-            src="https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/check-mark_1_u1flyg.svg"
+            src="https://res.cloudinary.com/amst/image/upload/v1639929248/conf_cof3e9.jpg"
             className="stats-icon"
             alt="country wide confirmed cases pic"
           />
           <p className="stats-number red">{totalConfirmedCases}</p>
         </div>
 
-        <div
-          // testid="countryWideActiveCases"
-          className="stats-block-column"
-        >
+        <div testid="countryWideActiveCases" className="stats-block-column">
           <p className="stats-title blue">Active</p>
           <img
-            src="https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/protection_2_dxjdpe.svg"
+            src="https://res.cloudinary.com/amst/image/upload/v1639929248/act_kq7nfx.jpg"
             className="stats-icon"
             alt="country wide active cases pic"
           />
           <p className="stats-number blue">{totalActiveCases}</p>
         </div>
 
-        <div
-          // testid="countryWideRecoveredCases"
-          className="stats-block-column"
-        >
+        <div testid="countryWideRecoveredCases" className="stats-block-column">
           <p className="stats-title green">Recovered</p>
           <img
-            src="https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/recovered_1_rens3v.svg"
+            src="https://res.cloudinary.com/amst/image/upload/v1639929248/uyf_ndpqov.jpg"
             className="stats-icon"
             alt="country wide recovered cases pic"
           />
           <p className="stats-number green">{totalRecoveredCases}</p>
         </div>
 
-        <div
-          // testid="countryWideDeceasedCases"
-          className="stats-block-column "
-        >
+        <div testid="countryWideDeceasedCases" className="stats-block-column ">
           <p className="stats-title gray">Deceased</p>
           <img
-            src="https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/breathing_1_bnuydp.svg"
+            src="https://res.cloudinary.com/amst/image/upload/v1639929248/dese_tgak4e.jpg"
             className="stats-icon"
             alt="country wide deceased cases pic"
           />
@@ -300,7 +288,7 @@ class Home extends Component {
   renderLoadingView = () => (
     <div
       className="products-details-loader-container loader-container"
-      //   testid="homeRouteLoader"
+      testid="homeRouteLoader"
     >
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
@@ -329,17 +317,13 @@ class Home extends Component {
   renderAllStatesList = () => {
     const {statesInfo} = this.state
     return (
-      <div
-        className="all-states-table"
-        //   testid="stateWiseCovidDataTable"
-      >
+      <div className="all-states-table" testid="stateWiseCovidDataTable">
         <div className="table-header">
           <div className="state-name-heading">
             <button
               className="order"
               type="button"
-              // testid="ascendingSort"
-
+              testid="ascendingSort"
               onClick={this.whenAscendingSortButtonClicked}
             >
               <FcGenericSortingAsc className="order-icon" />
@@ -348,7 +332,7 @@ class Home extends Component {
             <button
               className="order"
               type="button"
-              //   testid="descendingSort"
+              testid="descendingSort"
               onClick={this.whenDescendingSortButtonClicked}
             >
               <FcGenericSortingDesc className="order-icon" />
@@ -390,11 +374,7 @@ class Home extends Component {
       data.state_name.toLowerCase().includes(searchItem.toLowerCase()),
     )
 
-    // return this.setState({
-    //   search: event.target.value,
-    //   filteredSearchList: searchResult,
-    // })
-    this.setState({
+    return this.setState({
       search: event.target.value,
       filteredSearchList: searchResult,
     })
@@ -406,7 +386,7 @@ class Home extends Component {
     return (
       <ul
         className="search-result-container"
-        // testid="searchResultsUnorderedList"
+        testid="searchResultsUnorderedList"
       >
         {filteredSearchList.map(each => (
           <SearchResult
@@ -440,7 +420,7 @@ class Home extends Component {
                 placeholder="Enter the State"
                 className="search-bar"
                 onChange={this.searchStarted}
-                // onAbort={this.removeFilteredList}
+                onAbort={this.removeFilteredList}
               />
             </div>
             {search.length > 0 ? showSearchList : ''}

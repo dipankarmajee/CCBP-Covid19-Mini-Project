@@ -3,7 +3,7 @@ import {BiChevronRightSquare} from 'react-icons/bi'
 import './index.css'
 
 const SearchResult = props => {
-  const {stateName, stateCode} = props
+  const {stateName, stateCode, id} = props
 
   return (
     <li>

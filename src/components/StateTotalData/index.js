@@ -26,27 +26,27 @@ class StateTotalData extends Component {
     const confirmedData = {
       name: 'Confirmed',
       logo:
-        'https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/check-mark_1_u1flyg.svg',
+        'https://res.cloudinary.com/amst/image/upload/v1639929248/conf_cof3e9.jpg',
       value: totalConfirmed,
     }
 
     const activeData = {
       name: 'Active',
       logo:
-        'https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/protection_2_dxjdpe.svg',
+        'https://res.cloudinary.com/amst/image/upload/v1639929248/act_kq7nfx.jpg',
       value: totalActive,
     }
 
     const recoveredData = {
       name: 'Recovered',
       logo:
-        'https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/recovered_1_rens3v.svg',
+        'https://res.cloudinary.com/amst/image/upload/v1639929248/uyf_ndpqov.jpg',
       value: totalRecovered,
     }
     const deceasedData = {
       name: 'Deceased',
       logo:
-        'https://res.cloudinary.com/dti4rul7e/image/upload/v1665652516/Covid19%20Dashboard%20-%20React%20JS%20Mini%20Project/breathing_1_bnuydp.svg',
+        'https://res.cloudinary.com/amst/image/upload/v1639929248/dese_tgak4e.jpg',
       value: totalDeceased,
     }
 
@@ -79,9 +79,7 @@ class StateTotalData extends Component {
             value={confirmedData.name}
             onClick={() => this.onGetTotal(confirmedData.name)}
           >
-            <div
-            // testid="stateSpecificConfirmedCasesContainer"
-            >
+            <div testid="stateSpecificConfirmedCasesContainer">
               <p className="stats-title">{confirmedData.name}</p>
               <img
                 src={confirmedData.logo}
@@ -98,9 +96,7 @@ class StateTotalData extends Component {
             value={activeData.name}
             onClick={() => this.onGetTotal(activeData.name)}
           >
-            <div
-            // testid="stateSpecificActiveCasesContainer"
-            >
+            <div testid="stateSpecificActiveCasesContainer">
               <p className="stats-title">{activeData.name}</p>
               <img
                 src={activeData.logo}
@@ -117,9 +113,7 @@ class StateTotalData extends Component {
             value={recoveredData.name}
             onClick={() => this.onGetTotal(recoveredData.name)}
           >
-            <div
-            // testid="stateSpecificRecoveredCasesContainer"
-            >
+            <div testid="stateSpecificRecoveredCasesContainer">
               <p className="stats-title">{recoveredData.name}</p>
               <img
                 src={recoveredData.logo}
@@ -136,9 +130,7 @@ class StateTotalData extends Component {
             value={deceasedData.name}
             onClick={() => this.onGetTotal(deceasedData.name)}
           >
-            <div
-            // testid="stateSpecificDeceasedCasesContainer"
-            >
+            <div testid="stateSpecificDeceasedCasesContainer">
               <p className="stats-title">{deceasedData.name}</p>
               <img
                 src={deceasedData.logo}

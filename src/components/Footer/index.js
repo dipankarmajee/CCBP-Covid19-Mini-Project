@@ -17,15 +17,6 @@ const Footer = () => (
         <FiInstagram fontSize="48" color="#CBD5E1" />
         <FaTwitter fontSize="48" color="#CBD5E1" />
       </div>
-      <a
-        className="created-by"
-        href="https://www.linkedin.com/in/dipankarmajee1995/"
-        target="#"
-      >
-        <p className="footer-description created-by">
-          created by Dipankar Majee
-        </p>
-      </a>
     </div>
   </div>
 )

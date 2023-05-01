@@ -71,7 +71,7 @@ class ChartsData extends Component {
   renderLoadingView = () => (
     <div
       className="products-details-loader-container"
-      //   testid="timelinesDataLoader"
+      testid="timelinesDataLoader"
     >
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
@@ -97,13 +97,7 @@ class ChartsData extends Component {
 
     return (
       <div className="chart-wrapper">
-        <BarChart
-          width={700}
-          height={500}
-          data={toptendata}
-          barSize={45}
-          margin={{top: 25, right: 0, left: 0, bottom: 0}}
-        >
+        <BarChart width={700} height={450} data={toptendata} barSize={45}>
           <XAxis
             dataKey="date"
             stroke={`${colortype}`}
@@ -160,10 +154,7 @@ class ChartsData extends Component {
       <div className="barchart-container">{this.barChart()}</div>
 
       <h1 className="charts-title">Spread Trends</h1>
-      <div
-        //   testid="lineChartsContainer"
-        className="barcharts-container"
-      >
+      <div testid="lineChartsContainer" className="barcharts-container">
         <div className="charts confirmed-background">
           {this.graph('confirmed', '#FF073A')}
         </div>
